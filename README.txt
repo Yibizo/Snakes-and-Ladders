@@ -54,5 +54,3 @@ following conditions are met:
  - One of the players reaches the last square of the board, in which the respective player is declared the winner of the game. 
  - The game reaches the maximum number of turns established.
  - One of the players presses the 'E' or 'e' key to end the game, if the game type is manual. 
-
-Translated with www.DeepL.com/Translator (free version)
