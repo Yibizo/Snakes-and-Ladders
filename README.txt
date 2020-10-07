@@ -1,82 +1,58 @@
-----------------------------------------------------INSTRUCCIONES-----------------------------------------------------------------
+----------------------------------------------------INSTRUCTIONS-----------------------------------------------------------------
 
-Estas son las instrucciones para el juego "Snakes and Ladders" (Serpientes y Escaleras) escrito en C++ por Diego Mejía Suárez.
+These are the instructions for the game "Snakes and Ladders" written in C++ by Diego Mejía Suárez.
 
-Para poder jugar, solo se necesitan dos o más jugadores dispuestos a participar. Después, es necesario compilar y correr el 
-código para poder comenzar con el juego. 
+To be able to play, only two or more players willing to participate are needed. Then, it is necessary to compile and run the 
+code to be able to start the game. 
 
-Al momento de ejecutarlo, se deberá poder observar en la terminal las siguientes entradas de mensaje (además de que se explicará
-que entradas de mensaje utilizar en las mismas):
+At the time of execution, you should be able to observe in the terminal the following message entries (besides it will explain
+which message entries to use in them):
 
- - 'Number of tile in total: ' -> aquí se define el número de casillas en el tablero, que tiene que ser mayor que 0.
- - 'Number of snakes: ' -> aquí se define el número de serpientes en el tablero, que tiene que ser mayor que 0.
- - 'Number of ladders: ' -> aquí se define el número de escaleras en el tablero, que tiene que ser mayor que 0.
- - 'Snake penalty: ' -> aquí se define las casillas que se retroceden si se cae en una serpiente, que tiene que ser mayor que 0.
- - 'Ladder reward: ' -> aquí se define las casillas que se avanzan si se cae en una escalera, que tiene que ser mayor que 0.
- - 'Number of players: ' -> aquí se define el número de jugadores, que tiene que ser mayor que 2.
- - 'Number of turns: ' -> aquí se define el número de turnos, que tiene que ser mayor que 0.
- - 'Game type: ' -> aquí se deine el tipo de juego, variando entre automático o manual, este tiene que ser 'A' o 'M' (sin 
-    importar que sea mayúscula o minúscula).
+ - Number of tile in total: ' -> here you define the number of tiles in the board, which has to be greater than 0.
+ - Number of snakes: ' -> here you define the number of snakes on the board, which has to be greater than 0.
+ - Number of ladders: ' -> here you define the number of ladders on the board, which has to be bigger than 0.
+ - Snake penalty: ' -> here you define the squares that are moved back if you fall on a snake, which has to be bigger than 0.
+ - Ladder reward: ' -> here you define the squares that are advanced if you fall on a ladder, which has to be bigger than 0.
+ - Number of players: ' -> here you define the number of players, which has to be bigger than 2.
+ - Number of turns: ' -> here you define the number of turns, which has to be bigger than 0.
+ - Game type: ' -> here you define the type of game, varying between automatic or manual, this has to be 'A' or 'M' (without 
+    whether it is upper or lower case).
 
-Después de haber definido todas estas variables, si el juego es definido como automático, el código correrá por su cuenta. Pero 
-si se define como manual, a continuación se establecerá como progresar el juego. 
+After you have defined all these variables, if the game is defined as automatic, the code will run on its own. But 
+if it is defined as manual, then it will be set as progressing the game. 
 
-El siguiente mensaje aparece si el juego es manual:
+The following message appears if the game is manual:
 
 "Press 'C' to continue next turn, or 'E' to end the game:"
 
-Cuando veas este mensaje, presiona la tecla 'C' o 'c' en la terminal para comenzar con el juego, y 'E' o 'e' para acabar con 
-el proceso del juego en cualquier momento posible que se acepte texto de entrada, cualquier otra tecla o número solo te imprime 
-las instrucciones correctas para poder continuar con el juego.
+When you see this message, press 'C' or 'c' on the terminal to start the game, and 'E' or 'e' to end the game 
+the process of the game at any time possible that accepts input text, any other key or number only prints you 
+the correct instructions to be able to continue with the game.
 
-Al momento de presionar la tecla para continuar el juego o si el juego se está ejecutando de manera automática, la siguiente 
-información se puede ver en la terminal:
+When you press the key to continue the game or if the game is running automatically, the following 
+information can be viewed in the terminal:
 
-"Turn: ... / Player: ... / Current tile: ... / Dice roll: ... / Landed tile name: ... / Landed tile num: ..."
+"Turn: ... / Player: ... / Current tile: ... / Says roll: ... / Landed tile name: ... / Landed tile num: ..."
 
- - 'Turn': el turno en el que el juego esta, además de que el juego solo puede llegar a 20 turnos como máximo.
- - 'Player': el número del jugador al que le corresponde toda la siguiente información.
- - 'Current tile': El casilla en el que se encuentra el jugador con respecto al tablero, que tiene 30 casillas en total.
- - 'Dice roll': Número aleatorio generado entre 1 y 6 para simular un dado.
- - 'Landed tile name': la letra de la casilla en la que se encuentra el jugador con respecto al dado. El significado
-    de cada una de las letras es:
-     - "N": casilla normal que no tiene ningún atributo especial.
-     - "S": cassila serpiente que retrocede al jugador 3 casillas.
-     - "L": casilla escalera que avanza al jugador 3 casillas.
- - 'Landed tile num': el numero de la casilla en la que se encuentra el jugador después de haberse movido con respecto al dado
-    y a la casilla especial, si se puede aplicar el caso. 
+ - Turn': the turn the game is on, plus the game can only go up to a maximum of 20 turns.
+ - Player': the number of the player who has all the following information
+ - Current tile': The square in which the player is in relation to the board, which has 30 squares in total.
+ - Dice roll': Random number generated between 1 and 6 to simulate a die.
+ - Landed tile name': The letter of the square in which the player is located with respect to the die. The meaning
+    of each of the letters is:
+     - "N": normal box that does not have any special attribute.
+     - "S": snake cassil that moves back to the player 3 squares.
+     - "L": staircase that advances to the player 3 squares.
+ - Landed tile num': the number of the square in which the player is after having moved with respect to the die
+    and to the special box, if the case may apply. 
 
-Después de que toda esta información es impresa para el jugador #1, es turno del jugador #2 para continuar con el juego. Este tiene 
-la opción de continuar con el juego presionando la tecla 'C' o 'c', o de la misma manera acabar el juego con 'E' o 'e' y así
-sucesivamente para todos los jugadores hasta llegar de regreso al jugador #1. Este proceso se repite hasta que una de las 
-siguientes condiciones se cumpla:
+After all this information is printed for player #1, it is the turn of player #2 to continue with the game. This has 
+the option to continue the game by pressing the 'C' or 'c' key, or in the same way to end the game with 'E' or 'e' and so
+successively for all players until they reach player #1. This process is repeated until one 
+following conditions are met:
 
- - Uno de los jugadores llega a última casilla del tablero, en la cual el respectivo jugador es declarado el ganador del juego. 
- - El juego llega al máximo número de turnos establecido.
- - Uno de los jugadores presiona la tecla 'E' o 'e' para acabar el juego, si el tipo de juego es manual. 
+ - One of the players reaches the last square of the board, in which the respective player is declared the winner of the game. 
+ - The game reaches the maximum number of turns established.
+ - One of the players presses the 'E' or 'e' key to end the game, if the game type is manual. 
 
-----------------------------------------------------------------------------------------------------------------------------------
-
-Uno de los principales cambios que hice en mi código es dividir varios métodos del mismo en diferentes clases, y adjuntarlos 
-al juego de serpientes y escaleras utilizando agregación como de composición, además de que las dividí en 
-archivos 'hpp' en vez de tenerlo todo junto en un archivo 'cpp'. Después de esto, seguí las recomendaciones dadas e hice uso 
-de tanto listas de inicialización para hacer uso de métodos del dado y del tipo de juego en el juego de serpientes y escaleras,
-e igualmente implementación de estos métodos fuera de la propiedad pública de la clase utilizando 'scope resolution' para 
-eliminar cualquier tipo de ambiguedad.
-
-La forma en la que uso herencia, a pesar de que no estuviera implementada de la mejor manera posible, fue hacer que el juego
-de serpientes y escalera heredara de manera pública de la clase 'Game'. De esta manera, se heredan todos los atributos y 
-métodos del mismo. 
-
-Así pues, la manera en la que hice uso de herencia fue mencionada previamente, pero lo que hace toda esta jerarquía de diversos códigos
-polimórfica es el hecho de que, a lo largo de la escritura del código del mismo hice uso de apuntadores, creación de objetos 
-usando estos mismos apuntadores, y se estableció un método virtual, este siendo 'setPlayerTurn', para que después su hijo 
-'SnakesAndLadders' cambie este método a uno que pueda ser adaptado a diferentes jugadores, y no solo a dos como en la versión 
-anterior del código del juego entregado. 
-
-Por otro lado, las clases 'Dice' y 'GameType', debido a que dependen del juego para ser creadas y destruidas, se implementan de
-manera que el juego se componga de las mismas. Asimismo, las vectores de clases 'Tile' y 'Player',debido a que solo forman parte
-del juego, se implemetaron de manera que se agreguen al juego. Estas últimas podrían haber sido usadas mediante composición, pero 
-no tenía muy claro como usar estos vectores con apuntadores y declararlos en el constructor. 
-
-Con todo esto establecido, considero que todo este código es polimórfico, además de que hace uso de herencia a través del mismo. 
+Translated with www.DeepL.com/Translator (free version)
